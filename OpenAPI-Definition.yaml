@@ -1,3 +1,65 @@
+openapi: 3.0.3
+info:
+  title: API-TEST
+  description: Azure Logic App.
+  version: 1.0.0.0
+servers:
+  - url: https://prod-145.westeurope.logic.azure.com/workflows/f1113cbe6bf946f7a74f38c68eed5f98/triggers
+paths:
+  /When_an_HTTP_request_is_received/paths/invoke:
+    get:
+      summary: Trigger a run of the logic app.
+      operationId: When_an_HTTP_request_is_received-invoke
+      parameters:
+        - name: api-version
+          in: query
+          description: The service API version.
+          required: true
+          schema:
+            type: string
+        - name: sp
+          in: query
+          description: The permissions; generally 'read' or 'write'.
+          required: true
+          schema:
+            type: string
+        - name: sv
+          in: query
+          description: The version number of the query parameters.
+          required: true
+          schema:
+            type: string
+        - name: sig
+          in: query
+          description: The SHA 256 hash of the entire request URI with an internal key.
+          required: true
+          schema:
+            type: string
+      requestBody:
+        description: The request body.
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/request-When_an_HTTP_request_is_received'
+      responses:
+        '200':
+          description: The Logic App Response.
+          content:
+            application/json:
+              schema:
+                type: object
+        default:
+          description: The Logic App Response.
+          content:
+            application/json:
+              schema:
+                type: object
+components:
+  schemas:
+    request-When_an_HTTP_request_is_received:
+      type: object
+
 {
   "basePath": "/workflows/f1113cbe6bf946f7a74f38c68eed5f98/triggers",
   "consumes": [
