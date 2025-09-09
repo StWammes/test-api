@@ -1,0 +1,81 @@
+{
+  "basePath": "/workflows/f1113cbe6bf946f7a74f38c68eed5f98/triggers",
+  "consumes": [
+    "application/json"
+  ],
+  "definitions": {
+    "request-When_an_HTTP_request_is_received": {}
+  },
+  "host": "prod-145.westeurope.logic.azure.com",
+  "info": {
+    "description": "Azure Logic App.",
+    "title": "API-TEST",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "/When_an_HTTP_request_is_received/paths/invoke": {
+      "get": {
+        "deprecated": false,
+        "description": "Trigger a run of the logic app.",
+        "operationId": "When_an_HTTP_request_is_received-invoke",
+        "parameters": [
+          {
+            "description": "The service API version.",
+            "in": "query",
+            "name": "api-version",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The permissions; generally 'read' or 'write'.",
+            "in": "query",
+            "name": "sp",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The version number of the query parameters.",
+            "in": "query",
+            "name": "sv",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The SHA 256 hash of the entire request URI with an internal key.",
+            "in": "query",
+            "name": "sig",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "description": "The request body.",
+            "in": "body",
+            "name": "body",
+            "required": false,
+            "schema": {
+              "$ref": "#/definitions/request-When_an_HTTP_request_is_received"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The Logic App Response.",
+            "schema": {
+              "type": "object"
+            }
+          },
+          "default": {
+            "description": "The Logic App Response.",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    }
+  },
+  "produces": [
+    "application/json"
+  ],
+  "schemes": [
+    "https"
