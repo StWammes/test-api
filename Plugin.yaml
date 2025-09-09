@@ -1,0 +1,11 @@
+Descriptor:
+  Name: SampleAPIForBasicAuth
+  DisplayName: httpbin.org
+  Description: Plugin for making example http requests
+  SupportedAuthTypes:
+    - None
+
+SkillGroups:
+  - Format: API
+    Settings:
+      OpenApiSpecUrl: https://raw.githubusercontent.com/StWammes/test-api/refs/heads/main/OpenAPI-Definition.yaml
