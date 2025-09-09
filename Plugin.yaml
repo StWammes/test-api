@@ -8,4 +8,4 @@ Descriptor:
 SkillGroups:
   - Format: API
     Settings:
-      OpenApiSpecUrl: https://raw.githubusercontent.com/StWammes/test-api/refs/heads/main/OpenAPI-Definition.yaml
+      OpenApiSpecUrl: https://raw.githubusercontent.com/StWammes/test-api/refs/heads/main/OpenAPIspec.yaml
