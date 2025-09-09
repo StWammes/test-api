@@ -1,5 +1,5 @@
 Descriptor:
-  Name: SampleAPIForBasicAuth
+  Name: Johansplugin
   DisplayName: Johansplugin
   Description: Plugin for making example http requests
   SupportedAuthTypes:
