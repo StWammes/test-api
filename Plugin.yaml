@@ -1,6 +1,6 @@
 Descriptor:
   Name: SampleAPIForBasicAuth
-  DisplayName: httpbin.org
+  DisplayName: Johansplugin
   Description: Plugin for making example http requests
   SupportedAuthTypes:
     - None
